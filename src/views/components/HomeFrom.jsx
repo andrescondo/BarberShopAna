@@ -31,7 +31,7 @@ const HomeFrom = () => {
       console.log(res.data);
     })
 
-    console.log(res)
+    // console.log(res)
   }
 
   return(
@@ -45,7 +45,8 @@ const HomeFrom = () => {
             placeholder="Nombre"
             onChange={handleChange}
             // value={form.name}
-            maxLength="10" //limite de caracteres aceptados
+            maxLength="100" //limite de caracteres aceptados
+            required
           />
         </label>
         <label htmlFor="ci">
@@ -56,6 +57,7 @@ const HomeFrom = () => {
             placeholder="Cedula de identidad"
             onChange={handleChange}
             maxLength="10"
+            required
           />
         </label>
         <label htmlFor="phone">
@@ -66,6 +68,7 @@ const HomeFrom = () => {
             placeholder="Cedula de identidad"
             onChange={handleChange}
             maxLength="10"
+            required
           />
         </label>
         <label htmlFor="email">
