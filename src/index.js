@@ -18,7 +18,7 @@ app.use(morgan('dev')); //ver las peticiones con sus respectiva descripcion
 app.use(express.json());
 
 //Routes
-app.use('/api/client', require('./routers/users.routes'));
+app.use('/api/client', require('./routers/client.routes'));
  
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
