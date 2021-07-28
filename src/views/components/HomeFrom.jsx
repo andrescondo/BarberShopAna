@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 const InitialState = {
   name : "",
@@ -17,9 +18,20 @@ const HomeFrom = () => {
     });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(form);
+    const res = await axios.post('http://localhost:4000/api/client', {
+      name : form.name,
+      email : form.email,
+      phone : form.phone,
+      ci : form.ci
+    }).then(res => {
+      console.log(res);
+      console.log(res.data);
+    })
+
+    console.log(res)
   }
 
   return(
@@ -57,11 +69,11 @@ const HomeFrom = () => {
           />
         </label>
         <label htmlFor="email">
-        <p>Ingrese el numero de cedula</p>
+        <p>Ingrese el correo electronico</p>
           <input
             type="email"
             name="email"
-            placeholder="Cedula de identidad"
+            placeholder="Correo electronico"
             onChange={handleChange}
           />
         </label>
