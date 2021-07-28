@@ -1,0 +1,18 @@
+{
+  "name": "barbershop",
+  "version": "1.0.0",
+  "description": "barberia de ana, control de citas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "barberia_ana",
+    "react",
+    "node",
+    "mongodb",
+    "express"
+  ],
+  "author": "andres condo <@andreescondo>",
+  "license": "ISC"
+}
