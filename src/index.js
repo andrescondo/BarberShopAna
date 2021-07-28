@@ -8,7 +8,9 @@ const path = require('path');
 
 // Initializations
 const app = express();
-const {mongoose} =  require('./database');
+
+//called DB
+require('./database');
 
 //Settings
 app.set('port', process.env.PORT || 4000);
