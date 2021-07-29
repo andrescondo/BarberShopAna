@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import ClientBox from './ClientBox';
+
 export default class Client extends React.Component {
   constructor() {
     super();
@@ -25,7 +27,7 @@ export default class Client extends React.Component {
          {/* {this.state.res.map(data => <li>{data.name}</li> ) } */}
          {
            this.state.res.map( (data) => (
-             <li key={data._id}>{data.name}</li>
+            <ClientBox key={data._id} data={data} />
            ) ) 
          }
         </div>
