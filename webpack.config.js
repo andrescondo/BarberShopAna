@@ -1,7 +1,9 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   entry: './src/app/index.jsx', 
   output: {
-    path: __dirname + '/src/public/js',
+    path: __dirname + '/src/public/assets/',
     filename: 'bundle.js'
   },
   resolve: {
@@ -24,8 +26,18 @@ module.exports = {
           postTransformPublicPath: (p) => `__webpack_public_path__ + ${p}`,
         },
       },
-
-
+      {
+        test: /\.(s*)css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          "css-loader",
+        ],
+      },
     ]
-  }
+  },
+  plugins:[
+    new MiniCssExtractPlugin({
+      filename: "/[name].css",
+    }),
+  ],
 };

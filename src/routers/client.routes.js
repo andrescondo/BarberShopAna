@@ -23,11 +23,13 @@ router.get("/:id", async (req, res) =>{
 });
 
 router.put("/:id", async (req, res) => {
-  const { name, email, ci, date, attented } = req.body;
+  console.log(req.body)
+  const { name, email, ci,phone, date, attented } = req.body;
   await Client.findByIdAndUpdate(req.params.id, {
     name,
     email,
     ci,
+    phone,
     date,
     attented
   })

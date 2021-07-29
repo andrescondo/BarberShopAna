@@ -1,0 +1,16 @@
+:root{
+  --primary-color : #d3cea8;
+  --secondary-color: #36393B;
+  --grown: #696758;
+  --grey: #45484B;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+  background-color:var(--primary-color) ;
+  color:var(--secondary-color);
+  /* , #d6c06c, #896e3e, #5a4d35, #463d29 */
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}

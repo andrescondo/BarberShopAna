@@ -45,6 +45,7 @@ const ClientBoxCard = ({name, date, ci, phone, email, id}) => {
       <p>Cedula de identidad{ci}</p>
       <p>Telefono: {phone}</p>
       <p>Email: {email}</p>
+      
       <div>
         <p>¿Cita atendida?</p>
         <p>Cita {date}</p>

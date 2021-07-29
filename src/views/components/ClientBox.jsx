@@ -6,7 +6,16 @@ const ClientBox = ({data}) => {
     <div>
       <p>Nombre: {data.name}</p>
       <p>Telefono: {data.phone}</p>
-      {data.date ? (<p>Fecha de la cita: {data.date}</p>) : " " }
+      {
+        data.attented 
+        ? (<p>Atencion: {data.attented}</p>) 
+        : ""
+      }
+      {
+        data.date 
+        ? (<p>Fecha de la cita: {data.date}</p>) 
+        : " " 
+      }
 
       <Link to={"/clients/edit/" + data._id}>Editar</Link>
       <br />
