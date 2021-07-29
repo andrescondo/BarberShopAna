@@ -27,7 +27,8 @@ const HomeFrom = () => {
       name : form.name,
       email : form.email,
       phone : form.phone,
-      ci : form.ci
+      ci : form.ci,
+      date : form.date
     }).then(res => {
       console.log(res);
       console.log(res.data.data);
@@ -94,10 +95,10 @@ const HomeFrom = () => {
             name="date"
             value={form.date}
             min="2021-7-28"
-            max="2021-12-31"
+            // max="2021-12-31"
             onChange={handleChange}
             required
-            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+            // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
           />
         </label>
         <div className="Form-button">

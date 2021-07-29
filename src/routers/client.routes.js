@@ -10,8 +10,9 @@ router.get('/', async (req, res) =>{
 });
 
 router.post("/", async (req, res) => {
-  const {name, email, phone, ci} = req.body;
-  const client = new Client({name, email, phone, ci});
+  console.log(req.body);
+  const {name, email, phone, ci, date} = req.body;
+  const client = new Client({name, email, phone, ci, date});
   await client.save();
   // res.json({status: 'Client Saved'});
 })

@@ -5,7 +5,8 @@ const ClientShema = new Schema({
   name : {type: String , required: true},
   email : {type: String, required: true},
   phone: {type: String, required: false},
-  ci: {type:String, required: true}
+  ci: {type:String, required: true},
+  date : {type: String, required: true}
   
 });
 
