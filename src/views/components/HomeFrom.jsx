@@ -29,15 +29,15 @@ const HomeFrom = () => {
       ci : form.ci
     }).then(res => {
       console.log(res);
-      console.log(res.data);
+      console.log(res.data.data);
     })
 
-    // console.log(res)
+    console.log(res)
   }
 
   return(
     <div className="HomeFrom">
-      <Link to="/clients">Ver Clientes</Link>
+      <Link to="/clients">{`Ver Clientes => `}</Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           <p>Ingrese los nombres del cliente</p>
@@ -67,7 +67,7 @@ const HomeFrom = () => {
           <input
             type="phone"
             name="phone"
-            placeholder="Cedula de identidad"
+            placeholder="Numero de telefono"
             onChange={handleChange}
             maxLength="10"
             required

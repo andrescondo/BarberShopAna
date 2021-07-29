@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
   const {name, email, phone, ci} = req.body;
   const client = new Client({name, email, phone, ci});
   await client.save();
-  res.json({status: 'Client Saved'});
+  // res.json({status: 'Client Saved'});
 })
 
 module.exports = router;
