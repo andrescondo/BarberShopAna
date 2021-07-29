@@ -6,7 +6,8 @@ const InitialState = {
   name : "",
   email:"",
   phone:"",
-  ci:""
+  ci:"",
+  date: "2021-07-29"
 }
 
 const HomeFrom = () => {
@@ -44,9 +45,9 @@ const HomeFrom = () => {
           <input
             type="text"
             name="name"
+            value={form.name}
             placeholder="Nombre"
             onChange={handleChange}
-            // value={form.name}
             maxLength="100" //limite de caracteres aceptados
             required
           />
@@ -56,6 +57,7 @@ const HomeFrom = () => {
           <input
             type="text"
             name="ci"
+            value={form.ci}
             placeholder="Cedula de identidad"
             onChange={handleChange}
             maxLength="10"
@@ -67,6 +69,7 @@ const HomeFrom = () => {
           <input
             type="phone"
             name="phone"
+            value={form.phone}
             placeholder="Numero de telefono"
             onChange={handleChange}
             maxLength="10"
@@ -78,23 +81,25 @@ const HomeFrom = () => {
           <input
             type="email"
             name="email"
+            value={form.email}
             placeholder="Correo electronico"
             onChange={handleChange}
             required
           />
         </label>
-        {/* <label htmlFor="date">
+        <label htmlFor="date">
           <p>Ingrese La fecha de la cita</p>
           <input
             type="date"
             name="date"
+            value={form.date}
             min="2021-7-28"
             max="2021-12-31"
-            // placeholder="Correo electronico"
             onChange={handleChange}
             required
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
           />
-        </label> */}
+        </label>
         <div className="Form-button">
           <input type="submit" value="Guardar" />
         </div>

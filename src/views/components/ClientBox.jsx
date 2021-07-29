@@ -5,6 +5,7 @@ const ClientBox = ({data}) => {
     <div>
       <p>Nombre: {data.name}</p>
       <p>Telefono: {data.phone}</p>
+      <br />
     </div>
   )
 }
