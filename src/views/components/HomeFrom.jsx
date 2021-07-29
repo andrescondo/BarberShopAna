@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom'
 import axios from 'axios';
 
 const InitialState = {
@@ -36,6 +37,7 @@ const HomeFrom = () => {
 
   return(
     <div className="HomeFrom">
+      <Link to="/clients">Ver Clientes</Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           <p>Ingrese los nombres del cliente</p>
@@ -72,14 +74,27 @@ const HomeFrom = () => {
           />
         </label>
         <label htmlFor="email">
-        <p>Ingrese el correo electronico</p>
+          <p>Ingrese el correo electronico</p>
           <input
             type="email"
             name="email"
             placeholder="Correo electronico"
             onChange={handleChange}
+            required
           />
         </label>
+        {/* <label htmlFor="date">
+          <p>Ingrese La fecha de la cita</p>
+          <input
+            type="date"
+            name="date"
+            min="2021-7-28"
+            max="2021-12-31"
+            // placeholder="Correo electronico"
+            onChange={handleChange}
+            required
+          />
+        </label> */}
         <div className="Form-button">
           <input type="submit" value="Guardar" />
         </div>

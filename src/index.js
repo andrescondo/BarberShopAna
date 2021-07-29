@@ -21,6 +21,7 @@ app.use(express.json());
 
 //Routes
 app.use('/api/client', require('./routers/client.routes'));
+
  
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
