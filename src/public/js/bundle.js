@@ -375,9 +375,10 @@ eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/i
 /*!*****************************************!*\
   !*** ./src/views/components/Client.jsx ***!
   \*****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: C:/Users/Liss/Documents/andres-uni/programacion/barberShop/src/views/components/Client.jsx: Unexpected token (5:8)\\n\\n\\u001b[0m \\u001b[90m 3 | \\u001b[39m\\n \\u001b[90m 4 | \\u001b[39m\\u001b[36mexport\\u001b[39m \\u001b[36mdefault\\u001b[39m \\u001b[36mclass\\u001b[39m \\u001b[33mClient\\u001b[39m \\u001b[36mextends\\u001b[39m \\u001b[33mComponent\\u001b[39m {\\n\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 5 | \\u001b[39m  state \\u001b[33m=\\u001b[39m {\\n \\u001b[90m   | \\u001b[39m        \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\n \\u001b[90m 6 | \\u001b[39m    clients\\u001b[33m:\\u001b[39m []\\n \\u001b[90m 7 | \\u001b[39m  }\\n \\u001b[90m 8 | \\u001b[39m\\u001b[0m\\n\");\n\n//# sourceURL=webpack://barbershop/./src/views/components/Client.jsx?");
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ \"./node_modules/babel-runtime/regenerator/index.js\");\n\nvar _regenerator2 = _interopRequireDefault(_regenerator);\n\nvar _asyncToGenerator2 = __webpack_require__(/*! babel-runtime/helpers/asyncToGenerator */ \"./node_modules/babel-runtime/helpers/asyncToGenerator.js\");\n\nvar _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);\n\nvar _getPrototypeOf = __webpack_require__(/*! babel-runtime/core-js/object/get-prototype-of */ \"./node_modules/babel-runtime/core-js/object/get-prototype-of.js\");\n\nvar _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);\n\nvar _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ \"./node_modules/babel-runtime/helpers/classCallCheck.js\");\n\nvar _classCallCheck3 = _interopRequireDefault(_classCallCheck2);\n\nvar _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ \"./node_modules/babel-runtime/helpers/createClass.js\");\n\nvar _createClass3 = _interopRequireDefault(_createClass2);\n\nvar _possibleConstructorReturn2 = __webpack_require__(/*! babel-runtime/helpers/possibleConstructorReturn */ \"./node_modules/babel-runtime/helpers/possibleConstructorReturn.js\");\n\nvar _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);\n\nvar _inherits2 = __webpack_require__(/*! babel-runtime/helpers/inherits */ \"./node_modules/babel-runtime/helpers/inherits.js\");\n\nvar _inherits3 = _interopRequireDefault(_inherits2);\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Client = function (_React$Component) {\n  (0, _inherits3.default)(Client, _React$Component);\n\n  function Client() {\n    (0, _classCallCheck3.default)(this, Client);\n\n    var _this = (0, _possibleConstructorReturn3.default)(this, (Client.__proto__ || (0, _getPrototypeOf2.default)(Client)).call(this));\n\n    _this.state = {\n      res: []\n    };\n    return _this;\n  }\n\n  (0, _createClass3.default)(Client, [{\n    key: 'componentDidMount',\n    value: function () {\n      var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {\n        var res;\n        return _regenerator2.default.wrap(function _callee$(_context) {\n          while (1) {\n            switch (_context.prev = _context.next) {\n              case 0:\n                _context.next = 2;\n                return _axios2.default.get('http://localhost:4000/api/client');\n\n              case 2:\n                res = _context.sent;\n\n                this.setState({ res: res.data });\n                console.log(this.state.res);\n\n              case 5:\n              case 'end':\n                return _context.stop();\n            }\n          }\n        }, _callee, this);\n      }));\n\n      function componentDidMount() {\n        return _ref.apply(this, arguments);\n      }\n\n      return componentDidMount;\n    }()\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        { className: 'Client' },\n        _react2.default.createElement(\n          'div',\n          { className: 'client--box' },\n          _react2.default.createElement(\n            'h1',\n            null,\n            'Lista de clientes registrados'\n          ),\n          this.state.res.map(function (data) {\n            return _react2.default.createElement(\n              'li',\n              { key: data._id },\n              data.name\n            );\n          })\n        )\n      );\n    }\n  }]);\n  return Client;\n}(_react2.default.Component);\n\nexports.default = Client;\n\n//# sourceURL=webpack://barbershop/./src/views/components/Client.jsx?");
 
 /***/ }),
 
@@ -455,6 +456,16 @@ eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/core-js/object/create.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/object/create.js ***!
+  \*************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/object/create */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/object/create.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/object/create.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/core-js/object/define-property.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/babel-runtime/core-js/object/define-property.js ***!
@@ -462,6 +473,26 @@ eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/object/define-property */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/object/define-property.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/object/define-property.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/core-js/object/get-prototype-of.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/object/get-prototype-of.js ***!
+  \***********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/object/get-prototype-of.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/object/get-prototype-of.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/core-js/object/set-prototype-of.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/object/set-prototype-of.js ***!
+  \***********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/object/set-prototype-of.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/object/set-prototype-of.js?");
 
 /***/ }),
 
@@ -475,6 +506,26 @@ eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/core-js/symbol.js":
+/*!******************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/symbol.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/symbol */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/index.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/symbol.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/core-js/symbol/iterator.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/symbol/iterator.js ***!
+  \***************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ \"./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/iterator.js\"), __esModule: true };\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/core-js/symbol/iterator.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/helpers/asyncToGenerator.js":
 /*!****************************************************************!*\
   !*** ./node_modules/babel-runtime/helpers/asyncToGenerator.js ***!
@@ -483,6 +534,28 @@ eval("module.exports = { \"default\": __webpack_require__(/*! core-js/library/fn
 
 "use strict";
 eval("\n\nexports.__esModule = true;\n\nvar _promise = __webpack_require__(/*! ../core-js/promise */ \"./node_modules/babel-runtime/core-js/promise.js\");\n\nvar _promise2 = _interopRequireDefault(_promise);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (fn) {\n  return function () {\n    var gen = fn.apply(this, arguments);\n    return new _promise2.default(function (resolve, reject) {\n      function step(key, arg) {\n        try {\n          var info = gen[key](arg);\n          var value = info.value;\n        } catch (error) {\n          reject(error);\n          return;\n        }\n\n        if (info.done) {\n          resolve(value);\n        } else {\n          return _promise2.default.resolve(value).then(function (value) {\n            step(\"next\", value);\n          }, function (err) {\n            step(\"throw\", err);\n          });\n        }\n      }\n\n      return step(\"next\");\n    });\n  };\n};\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/asyncToGenerator.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/helpers/classCallCheck.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/babel-runtime/helpers/classCallCheck.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\n\nexports.default = function (instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n};\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/classCallCheck.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/helpers/createClass.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/babel-runtime/helpers/createClass.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\n\nvar _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ \"./node_modules/babel-runtime/core-js/object/define-property.js\");\n\nvar _defineProperty2 = _interopRequireDefault(_defineProperty);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function () {\n  function defineProperties(target, props) {\n    for (var i = 0; i < props.length; i++) {\n      var descriptor = props[i];\n      descriptor.enumerable = descriptor.enumerable || false;\n      descriptor.configurable = true;\n      if (\"value\" in descriptor) descriptor.writable = true;\n      (0, _defineProperty2.default)(target, descriptor.key, descriptor);\n    }\n  }\n\n  return function (Constructor, protoProps, staticProps) {\n    if (protoProps) defineProperties(Constructor.prototype, protoProps);\n    if (staticProps) defineProperties(Constructor, staticProps);\n    return Constructor;\n  };\n}();\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/createClass.js?");
 
 /***/ }),
 
@@ -508,6 +581,28 @@ eval("\n\nexports.__esModule = true;\n\nvar _assign = __webpack_require__(/*! ..
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/helpers/inherits.js":
+/*!********************************************************!*\
+  !*** ./node_modules/babel-runtime/helpers/inherits.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\n\nvar _setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ \"./node_modules/babel-runtime/core-js/object/set-prototype-of.js\");\n\nvar _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);\n\nvar _create = __webpack_require__(/*! ../core-js/object/create */ \"./node_modules/babel-runtime/core-js/object/create.js\");\n\nvar _create2 = _interopRequireDefault(_create);\n\nvar _typeof2 = __webpack_require__(/*! ../helpers/typeof */ \"./node_modules/babel-runtime/helpers/typeof.js\");\n\nvar _typeof3 = _interopRequireDefault(_typeof2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (subClass, superClass) {\n  if (typeof superClass !== \"function\" && superClass !== null) {\n    throw new TypeError(\"Super expression must either be null or a function, not \" + (typeof superClass === \"undefined\" ? \"undefined\" : (0, _typeof3.default)(superClass)));\n  }\n\n  subClass.prototype = (0, _create2.default)(superClass && superClass.prototype, {\n    constructor: {\n      value: subClass,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;\n};\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/inherits.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/helpers/possibleConstructorReturn.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/babel-runtime/helpers/possibleConstructorReturn.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\n\nvar _typeof2 = __webpack_require__(/*! ../helpers/typeof */ \"./node_modules/babel-runtime/helpers/typeof.js\");\n\nvar _typeof3 = _interopRequireDefault(_typeof2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (self, call) {\n  if (!self) {\n    throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\");\n  }\n\n  return call && ((typeof call === \"undefined\" ? \"undefined\" : (0, _typeof3.default)(call)) === \"object\" || typeof call === \"function\") ? call : self;\n};\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/possibleConstructorReturn.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/helpers/slicedToArray.js":
 /*!*************************************************************!*\
   !*** ./node_modules/babel-runtime/helpers/slicedToArray.js ***!
@@ -516,6 +611,17 @@ eval("\n\nexports.__esModule = true;\n\nvar _assign = __webpack_require__(/*! ..
 
 "use strict";
 eval("\n\nexports.__esModule = true;\n\nvar _isIterable2 = __webpack_require__(/*! ../core-js/is-iterable */ \"./node_modules/babel-runtime/core-js/is-iterable.js\");\n\nvar _isIterable3 = _interopRequireDefault(_isIterable2);\n\nvar _getIterator2 = __webpack_require__(/*! ../core-js/get-iterator */ \"./node_modules/babel-runtime/core-js/get-iterator.js\");\n\nvar _getIterator3 = _interopRequireDefault(_getIterator2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function () {\n  function sliceIterator(arr, i) {\n    var _arr = [];\n    var _n = true;\n    var _d = false;\n    var _e = undefined;\n\n    try {\n      for (var _i = (0, _getIterator3.default)(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {\n        _arr.push(_s.value);\n\n        if (i && _arr.length === i) break;\n      }\n    } catch (err) {\n      _d = true;\n      _e = err;\n    } finally {\n      try {\n        if (!_n && _i[\"return\"]) _i[\"return\"]();\n      } finally {\n        if (_d) throw _e;\n      }\n    }\n\n    return _arr;\n  }\n\n  return function (arr, i) {\n    if (Array.isArray(arr)) {\n      return arr;\n    } else if ((0, _isIterable3.default)(Object(arr))) {\n      return sliceIterator(arr, i);\n    } else {\n      throw new TypeError(\"Invalid attempt to destructure non-iterable instance\");\n    }\n  };\n}();\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/slicedToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/helpers/typeof.js":
+/*!******************************************************!*\
+  !*** ./node_modules/babel-runtime/helpers/typeof.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\n\nvar _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ \"./node_modules/babel-runtime/core-js/symbol/iterator.js\");\n\nvar _iterator2 = _interopRequireDefault(_iterator);\n\nvar _symbol = __webpack_require__(/*! ../core-js/symbol */ \"./node_modules/babel-runtime/core-js/symbol.js\");\n\nvar _symbol2 = _interopRequireDefault(_symbol);\n\nvar _typeof = typeof _symbol2.default === \"function\" && typeof _iterator2.default === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === \"function\" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? \"symbol\" : typeof obj; };\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = typeof _symbol2.default === \"function\" && _typeof(_iterator2.default) === \"symbol\" ? function (obj) {\n  return typeof obj === \"undefined\" ? \"undefined\" : _typeof(obj);\n} : function (obj) {\n  return obj && typeof _symbol2.default === \"function\" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? \"symbol\" : typeof obj === \"undefined\" ? \"undefined\" : _typeof(obj);\n};\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/helpers/typeof.js?");
 
 /***/ }),
 
@@ -549,6 +655,16 @@ eval("__webpack_require__(/*! ../../modules/es6.object.assign */ \"./node_module
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/object/create.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/object/create.js ***!
+  \*************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ../../modules/es6.object.create */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.create.js\");\nvar $Object = __webpack_require__(/*! ../../modules/_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\").Object;\nmodule.exports = function create(P, D) {\n  return $Object.create(P, D);\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/object/create.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/object/define-property.js":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/object/define-property.js ***!
@@ -559,6 +675,26 @@ eval("__webpack_require__(/*! ../../modules/es6.object.define-property */ \"./no
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/object/get-prototype-of.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/object/get-prototype-of.js ***!
+  \***********************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ../../modules/es6.object.get-prototype-of */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.get-prototype-of.js\");\nmodule.exports = __webpack_require__(/*! ../../modules/_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\").Object.getPrototypeOf;\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/object/get-prototype-of.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/object/set-prototype-of.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/object/set-prototype-of.js ***!
+  \***********************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.set-prototype-of.js\");\nmodule.exports = __webpack_require__(/*! ../../modules/_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\").Object.setPrototypeOf;\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/object/set-prototype-of.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/promise.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/promise.js ***!
@@ -566,6 +702,26 @@ eval("__webpack_require__(/*! ../../modules/es6.object.define-property */ \"./no
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("__webpack_require__(/*! ../modules/es6.object.to-string */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.to-string.js\");\n__webpack_require__(/*! ../modules/es6.string.iterator */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.string.iterator.js\");\n__webpack_require__(/*! ../modules/web.dom.iterable */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/web.dom.iterable.js\");\n__webpack_require__(/*! ../modules/es6.promise */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.promise.js\");\n__webpack_require__(/*! ../modules/es7.promise.finally */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.promise.finally.js\");\n__webpack_require__(/*! ../modules/es7.promise.try */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.promise.try.js\");\nmodule.exports = __webpack_require__(/*! ../modules/_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\").Promise;\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/promise.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/index.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/index.js ***!
+  \************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ../../modules/es6.symbol */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.symbol.js\");\n__webpack_require__(/*! ../../modules/es6.object.to-string */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.to-string.js\");\n__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.async-iterator.js\");\n__webpack_require__(/*! ../../modules/es7.symbol.observable */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.observable.js\");\nmodule.exports = __webpack_require__(/*! ../../modules/_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\").Symbol;\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/iterator.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/iterator.js ***!
+  \***************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ../../modules/es6.string.iterator */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.string.iterator.js\");\n__webpack_require__(/*! ../../modules/web.dom.iterable */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/web.dom.iterable.js\");\nmodule.exports = __webpack_require__(/*! ../../modules/_wks-ext */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js\").f('iterator');\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/iterator.js?");
 
 /***/ }),
 
@@ -699,6 +855,16 @@ eval("// IE 8- don't enum bug keys\nmodule.exports = (\n  'constructor,hasOwnPro
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-keys.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-keys.js ***!
+  \***************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// all enumerable object keys, includes symbols\nvar getKeys = __webpack_require__(/*! ./_object-keys */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-keys.js\");\nvar gOPS = __webpack_require__(/*! ./_object-gops */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gops.js\");\nvar pIE = __webpack_require__(/*! ./_object-pie */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-pie.js\");\nmodule.exports = function (it) {\n  var result = getKeys(it);\n  var getSymbols = gOPS.f;\n  if (getSymbols) {\n    var symbols = getSymbols(it);\n    var isEnum = pIE.f;\n    var i = 0;\n    var key;\n    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);\n  } return result;\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-keys.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js":
 /*!************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js ***!
@@ -809,6 +975,16 @@ eval("// check on default Array iterator\nvar Iterators = __webpack_require__(/*
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-array.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-array.js ***!
+  \**************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// 7.2.2 IsArray(argument)\nvar cof = __webpack_require__(/*! ./_cof */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_cof.js\");\nmodule.exports = Array.isArray || function isArray(arg) {\n  return cof(arg) == 'Array';\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-array.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js":
 /*!***************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js ***!
@@ -891,6 +1067,16 @@ eval("module.exports = true;\n\n\n//# sourceURL=webpack://barbershop/./node_modu
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_meta.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_meta.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var META = __webpack_require__(/*! ./_uid */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_uid.js\")('meta');\nvar isObject = __webpack_require__(/*! ./_is-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js\");\nvar has = __webpack_require__(/*! ./_has */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_has.js\");\nvar setDesc = __webpack_require__(/*! ./_object-dp */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dp.js\").f;\nvar id = 0;\nvar isExtensible = Object.isExtensible || function () {\n  return true;\n};\nvar FREEZE = !__webpack_require__(/*! ./_fails */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_fails.js\")(function () {\n  return isExtensible(Object.preventExtensions({}));\n});\nvar setMeta = function (it) {\n  setDesc(it, META, { value: {\n    i: 'O' + ++id, // object ID\n    w: {}          // weak collections IDs\n  } });\n};\nvar fastKey = function (it, create) {\n  // return primitive with prefix\n  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;\n  if (!has(it, META)) {\n    // can't set metadata to uncaught frozen object\n    if (!isExtensible(it)) return 'F';\n    // not necessary to add metadata\n    if (!create) return 'E';\n    // add missing metadata\n    setMeta(it);\n  // return object ID\n  } return it[META].i;\n};\nvar getWeak = function (it, create) {\n  if (!has(it, META)) {\n    // can't set metadata to uncaught frozen object\n    if (!isExtensible(it)) return true;\n    // not necessary to add metadata\n    if (!create) return false;\n    // add missing metadata\n    setMeta(it);\n  // return hash weak collections IDs\n  } return it[META].w;\n};\n// add metadata on freeze-family methods calling\nvar onFreeze = function (it) {\n  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);\n  return it;\n};\nvar meta = module.exports = {\n  KEY: META,\n  NEED: false,\n  fastKey: fastKey,\n  getWeak: getWeak,\n  onFreeze: onFreeze\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_meta.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_microtask.js":
 /*!***************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_microtask.js ***!
@@ -953,6 +1139,36 @@ eval("var dP = __webpack_require__(/*! ./_object-dp */ \"./node_modules/babel-ru
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("var pIE = __webpack_require__(/*! ./_object-pie */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-pie.js\");\nvar createDesc = __webpack_require__(/*! ./_property-desc */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_property-desc.js\");\nvar toIObject = __webpack_require__(/*! ./_to-iobject */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-iobject.js\");\nvar toPrimitive = __webpack_require__(/*! ./_to-primitive */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-primitive.js\");\nvar has = __webpack_require__(/*! ./_has */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_has.js\");\nvar IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_ie8-dom-define.js\");\nvar gOPD = Object.getOwnPropertyDescriptor;\n\nexports.f = __webpack_require__(/*! ./_descriptors */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_descriptors.js\") ? gOPD : function getOwnPropertyDescriptor(O, P) {\n  O = toIObject(O);\n  P = toPrimitive(P, true);\n  if (IE8_DOM_DEFINE) try {\n    return gOPD(O, P);\n  } catch (e) { /* empty */ }\n  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn-ext.js":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn-ext.js ***!
+  \*********************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window\nvar toIObject = __webpack_require__(/*! ./_to-iobject */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-iobject.js\");\nvar gOPN = __webpack_require__(/*! ./_object-gopn */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn.js\").f;\nvar toString = {}.toString;\n\nvar windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames\n  ? Object.getOwnPropertyNames(window) : [];\n\nvar getWindowNames = function (it) {\n  try {\n    return gOPN(it);\n  } catch (e) {\n    return windowNames.slice();\n  }\n};\n\nmodule.exports.f = function getOwnPropertyNames(it) {\n  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn-ext.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)\nvar $keys = __webpack_require__(/*! ./_object-keys-internal */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-keys-internal.js\");\nvar hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-bug-keys.js\").concat('length', 'prototype');\n\nexports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {\n  return $keys(O, hiddenKeys);\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gops.js":
 /*!*****************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gops.js ***!
@@ -1003,6 +1219,16 @@ eval("exports.f = {}.propertyIsEnumerable;\n\n\n//# sourceURL=webpack://barbersh
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-sap.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-sap.js ***!
+  \****************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// most Object methods by ES6 should accept primitives\nvar $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\nvar core = __webpack_require__(/*! ./_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\");\nvar fails = __webpack_require__(/*! ./_fails */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_fails.js\");\nmodule.exports = function (KEY, exec) {\n  var fn = (core.Object || {})[KEY] || Object[KEY];\n  var exp = {};\n  exp[KEY] = exec(fn);\n  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-sap.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_perform.js":
 /*!*************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_perform.js ***!
@@ -1050,6 +1276,16 @@ eval("var hide = __webpack_require__(/*! ./_hide */ \"./node_modules/babel-runti
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__(/*! ./_hide */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_hide.js\");\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_redefine.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_set-proto.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_set-proto.js ***!
+  \***************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// Works with __proto__ only. Old v8 can't work with null proto objects.\n/* eslint-disable no-proto */\nvar isObject = __webpack_require__(/*! ./_is-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js\");\nvar anObject = __webpack_require__(/*! ./_an-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_an-object.js\");\nvar check = function (O, proto) {\n  anObject(O);\n  if (!isObject(proto) && proto !== null) throw TypeError(proto + \": can't set as prototype!\");\n};\nmodule.exports = {\n  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line\n    function (test, buggy, set) {\n      try {\n        set = __webpack_require__(/*! ./_ctx */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_ctx.js\")(Function.call, __webpack_require__(/*! ./_object-gopd */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js\").f(Object.prototype, '__proto__').set, 2);\n        set(test, []);\n        buggy = !(test instanceof Array);\n      } catch (e) { buggy = true; }\n      return function setPrototypeOf(O, proto) {\n        check(O, proto);\n        if (buggy) O.__proto__ = proto;\n        else set(O, proto);\n        return O;\n      };\n    }({}, false) : undefined),\n  check: check\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_set-proto.js?");
 
 /***/ }),
 
@@ -1204,6 +1440,26 @@ eval("var global = __webpack_require__(/*! ./_global */ \"./node_modules/babel-r
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js ***!
+  \****************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var global = __webpack_require__(/*! ./_global */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_global.js\");\nvar core = __webpack_require__(/*! ./_core */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js\");\nvar LIBRARY = __webpack_require__(/*! ./_library */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_library.js\");\nvar wksExt = __webpack_require__(/*! ./_wks-ext */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js\");\nvar defineProperty = __webpack_require__(/*! ./_object-dp */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dp.js\").f;\nmodule.exports = function (name) {\n  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});\n  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });\n};\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("exports.f = __webpack_require__(/*! ./_wks */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks.js\");\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks.js":
 /*!*********************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks.js ***!
@@ -1265,6 +1521,16 @@ eval("// 19.1.3.1 Object.assign(target, source)\nvar $export = __webpack_require
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.create.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.create.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\n// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])\n$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-create.js\") });\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.create.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.define-property.js":
 /*!*******************************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.define-property.js ***!
@@ -1272,6 +1538,26 @@ eval("// 19.1.3.1 Object.assign(target, source)\nvar $export = __webpack_require
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("var $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\n// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)\n$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_descriptors.js\"), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dp.js\").f });\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.define-property.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.get-prototype-of.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.get-prototype-of.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// 19.1.2.9 Object.getPrototypeOf(O)\nvar toObject = __webpack_require__(/*! ./_to-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-object.js\");\nvar $getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gpo.js\");\n\n__webpack_require__(/*! ./_object-sap */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-sap.js\")('getPrototypeOf', function () {\n  return function getPrototypeOf(it) {\n    return $getPrototypeOf(toObject(it));\n  };\n});\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.get-prototype-of.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.set-prototype-of.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.set-prototype-of.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// 19.1.3.19 Object.setPrototypeOf(O, proto)\nvar $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\n$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_set-proto.js\").set });\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.set-prototype-of.js?");
 
 /***/ }),
 
@@ -1307,6 +1593,17 @@ eval("\nvar $at = __webpack_require__(/*! ./_string-at */ \"./node_modules/babel
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.symbol.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.symbol.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n// ECMAScript 6 symbols shim\nvar global = __webpack_require__(/*! ./_global */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_global.js\");\nvar has = __webpack_require__(/*! ./_has */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_has.js\");\nvar DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_descriptors.js\");\nvar $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\nvar redefine = __webpack_require__(/*! ./_redefine */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_redefine.js\");\nvar META = __webpack_require__(/*! ./_meta */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_meta.js\").KEY;\nvar $fails = __webpack_require__(/*! ./_fails */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_fails.js\");\nvar shared = __webpack_require__(/*! ./_shared */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_shared.js\");\nvar setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_set-to-string-tag.js\");\nvar uid = __webpack_require__(/*! ./_uid */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_uid.js\");\nvar wks = __webpack_require__(/*! ./_wks */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks.js\");\nvar wksExt = __webpack_require__(/*! ./_wks-ext */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js\");\nvar wksDefine = __webpack_require__(/*! ./_wks-define */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js\");\nvar enumKeys = __webpack_require__(/*! ./_enum-keys */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-keys.js\");\nvar isArray = __webpack_require__(/*! ./_is-array */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-array.js\");\nvar anObject = __webpack_require__(/*! ./_an-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_an-object.js\");\nvar isObject = __webpack_require__(/*! ./_is-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js\");\nvar toObject = __webpack_require__(/*! ./_to-object */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-object.js\");\nvar toIObject = __webpack_require__(/*! ./_to-iobject */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-iobject.js\");\nvar toPrimitive = __webpack_require__(/*! ./_to-primitive */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_to-primitive.js\");\nvar createDesc = __webpack_require__(/*! ./_property-desc */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_property-desc.js\");\nvar _create = __webpack_require__(/*! ./_object-create */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-create.js\");\nvar gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn-ext.js\");\nvar $GOPD = __webpack_require__(/*! ./_object-gopd */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js\");\nvar $GOPS = __webpack_require__(/*! ./_object-gops */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gops.js\");\nvar $DP = __webpack_require__(/*! ./_object-dp */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dp.js\");\nvar $keys = __webpack_require__(/*! ./_object-keys */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-keys.js\");\nvar gOPD = $GOPD.f;\nvar dP = $DP.f;\nvar gOPN = gOPNExt.f;\nvar $Symbol = global.Symbol;\nvar $JSON = global.JSON;\nvar _stringify = $JSON && $JSON.stringify;\nvar PROTOTYPE = 'prototype';\nvar HIDDEN = wks('_hidden');\nvar TO_PRIMITIVE = wks('toPrimitive');\nvar isEnum = {}.propertyIsEnumerable;\nvar SymbolRegistry = shared('symbol-registry');\nvar AllSymbols = shared('symbols');\nvar OPSymbols = shared('op-symbols');\nvar ObjectProto = Object[PROTOTYPE];\nvar USE_NATIVE = typeof $Symbol == 'function' && !!$GOPS.f;\nvar QObject = global.QObject;\n// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173\nvar setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;\n\n// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687\nvar setSymbolDesc = DESCRIPTORS && $fails(function () {\n  return _create(dP({}, 'a', {\n    get: function () { return dP(this, 'a', { value: 7 }).a; }\n  })).a != 7;\n}) ? function (it, key, D) {\n  var protoDesc = gOPD(ObjectProto, key);\n  if (protoDesc) delete ObjectProto[key];\n  dP(it, key, D);\n  if (protoDesc && it !== ObjectProto) dP(ObjectProto, key, protoDesc);\n} : dP;\n\nvar wrap = function (tag) {\n  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);\n  sym._k = tag;\n  return sym;\n};\n\nvar isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function (it) {\n  return typeof it == 'symbol';\n} : function (it) {\n  return it instanceof $Symbol;\n};\n\nvar $defineProperty = function defineProperty(it, key, D) {\n  if (it === ObjectProto) $defineProperty(OPSymbols, key, D);\n  anObject(it);\n  key = toPrimitive(key, true);\n  anObject(D);\n  if (has(AllSymbols, key)) {\n    if (!D.enumerable) {\n      if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));\n      it[HIDDEN][key] = true;\n    } else {\n      if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;\n      D = _create(D, { enumerable: createDesc(0, false) });\n    } return setSymbolDesc(it, key, D);\n  } return dP(it, key, D);\n};\nvar $defineProperties = function defineProperties(it, P) {\n  anObject(it);\n  var keys = enumKeys(P = toIObject(P));\n  var i = 0;\n  var l = keys.length;\n  var key;\n  while (l > i) $defineProperty(it, key = keys[i++], P[key]);\n  return it;\n};\nvar $create = function create(it, P) {\n  return P === undefined ? _create(it) : $defineProperties(_create(it), P);\n};\nvar $propertyIsEnumerable = function propertyIsEnumerable(key) {\n  var E = isEnum.call(this, key = toPrimitive(key, true));\n  if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;\n  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;\n};\nvar $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {\n  it = toIObject(it);\n  key = toPrimitive(key, true);\n  if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return;\n  var D = gOPD(it, key);\n  if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;\n  return D;\n};\nvar $getOwnPropertyNames = function getOwnPropertyNames(it) {\n  var names = gOPN(toIObject(it));\n  var result = [];\n  var i = 0;\n  var key;\n  while (names.length > i) {\n    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);\n  } return result;\n};\nvar $getOwnPropertySymbols = function getOwnPropertySymbols(it) {\n  var IS_OP = it === ObjectProto;\n  var names = gOPN(IS_OP ? OPSymbols : toIObject(it));\n  var result = [];\n  var i = 0;\n  var key;\n  while (names.length > i) {\n    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);\n  } return result;\n};\n\n// 19.4.1.1 Symbol([description])\nif (!USE_NATIVE) {\n  $Symbol = function Symbol() {\n    if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');\n    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);\n    var $set = function (value) {\n      if (this === ObjectProto) $set.call(OPSymbols, value);\n      if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;\n      setSymbolDesc(this, tag, createDesc(1, value));\n    };\n    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });\n    return wrap(tag);\n  };\n  redefine($Symbol[PROTOTYPE], 'toString', function toString() {\n    return this._k;\n  });\n\n  $GOPD.f = $getOwnPropertyDescriptor;\n  $DP.f = $defineProperty;\n  __webpack_require__(/*! ./_object-gopn */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopn.js\").f = gOPNExt.f = $getOwnPropertyNames;\n  __webpack_require__(/*! ./_object-pie */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_object-pie.js\").f = $propertyIsEnumerable;\n  $GOPS.f = $getOwnPropertySymbols;\n\n  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_library.js\")) {\n    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);\n  }\n\n  wksExt.f = function (name) {\n    return wrap(wks(name));\n  };\n}\n\n$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });\n\nfor (var es6Symbols = (\n  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14\n  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'\n).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);\n\nfor (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);\n\n$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {\n  // 19.4.2.1 Symbol.for(key)\n  'for': function (key) {\n    return has(SymbolRegistry, key += '')\n      ? SymbolRegistry[key]\n      : SymbolRegistry[key] = $Symbol(key);\n  },\n  // 19.4.2.5 Symbol.keyFor(sym)\n  keyFor: function keyFor(sym) {\n    if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');\n    for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;\n  },\n  useSetter: function () { setter = true; },\n  useSimple: function () { setter = false; }\n});\n\n$export($export.S + $export.F * !USE_NATIVE, 'Object', {\n  // 19.1.2.2 Object.create(O [, Properties])\n  create: $create,\n  // 19.1.2.4 Object.defineProperty(O, P, Attributes)\n  defineProperty: $defineProperty,\n  // 19.1.2.3 Object.defineProperties(O, Properties)\n  defineProperties: $defineProperties,\n  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)\n  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,\n  // 19.1.2.7 Object.getOwnPropertyNames(O)\n  getOwnPropertyNames: $getOwnPropertyNames,\n  // 19.1.2.8 Object.getOwnPropertySymbols(O)\n  getOwnPropertySymbols: $getOwnPropertySymbols\n});\n\n// Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives\n// https://bugs.chromium.org/p/v8/issues/detail?id=3443\nvar FAILS_ON_PRIMITIVES = $fails(function () { $GOPS.f(1); });\n\n$export($export.S + $export.F * FAILS_ON_PRIMITIVES, 'Object', {\n  getOwnPropertySymbols: function getOwnPropertySymbols(it) {\n    return $GOPS.f(toObject(it));\n  }\n});\n\n// 24.3.2 JSON.stringify(value [, replacer [, space]])\n$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {\n  var S = $Symbol();\n  // MS Edge converts symbol values to JSON as {}\n  // WebKit converts symbol values to JSON as null\n  // V8 throws on boxed symbols\n  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';\n})), 'JSON', {\n  stringify: function stringify(it) {\n    var args = [it];\n    var i = 1;\n    var replacer, $replacer;\n    while (arguments.length > i) args.push(arguments[i++]);\n    $replacer = replacer = args[1];\n    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined\n    if (!isArray(replacer)) replacer = function (key, value) {\n      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);\n      if (!isSymbol(value)) return value;\n    };\n    args[1] = replacer;\n    return _stringify.apply($JSON, args);\n  }\n});\n\n// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)\n$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_hide.js\")($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);\n// 19.4.3.5 Symbol.prototype[@@toStringTag]\nsetToStringTag($Symbol, 'Symbol');\n// 20.2.1.9 Math[@@toStringTag]\nsetToStringTag(Math, 'Math', true);\n// 24.3.3 JSON[@@toStringTag]\nsetToStringTag(global.JSON, 'JSON', true);\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es6.symbol.js?");
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.promise.finally.js":
 /*!************************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.promise.finally.js ***!
@@ -1326,6 +1623,26 @@ eval("// https://github.com/tc39/proposal-promise-finally\n\nvar $export = __web
 
 "use strict";
 eval("\n// https://github.com/tc39/proposal-promise-try\nvar $export = __webpack_require__(/*! ./_export */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_export.js\");\nvar newPromiseCapability = __webpack_require__(/*! ./_new-promise-capability */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_new-promise-capability.js\");\nvar perform = __webpack_require__(/*! ./_perform */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_perform.js\");\n\n$export($export.S, 'Promise', { 'try': function (callbackfn) {\n  var promiseCapability = newPromiseCapability.f(this);\n  var result = perform(callbackfn);\n  (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);\n  return promiseCapability.promise;\n} });\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.promise.try.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.async-iterator.js":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ./_wks-define */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js\")('asyncIterator');\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.async-iterator.js?");
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.observable.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.observable.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ./_wks-define */ \"./node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js\")('observable');\n\n\n//# sourceURL=webpack://barbershop/./node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.observable.js?");
 
 /***/ }),
 
