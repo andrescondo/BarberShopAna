@@ -1,31 +1,16 @@
 import React from 'react';
 import axios from 'axios'
 import {useEffect, useState} from 'react'
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 
 const stateAttention = {
   cita: 'No',
   a:''
 }
 
-const ClientBoxCard = ({name, date, ci, phone, email}) => {
+const ClientBoxCard = ({name, date, ci, phone, email, id}) => {
   const [attention, setAttention] = useState(stateAttention);
 
-  // // console.log(useParams())
-  // const {id} = useParams()
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-
-  // const fetchData = async () => {
-  //   let api = await axios.get(`http://localhost:4000/api/client/${id}`)
-  //   // console.log(api.data)
-  //   api = await api.data;
-  //   setData({
-  //     ...data,
-  //     api
-  //   })
-  // }
 
   const handleChange = (e) => {
     setAttention({ 
@@ -34,7 +19,24 @@ const ClientBoxCard = ({name, date, ci, phone, email}) => {
     })
   }
 
-  console.log(attention)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(attention)
+    
+    const updateClient  = {
+      name : name,
+      email : email,
+      phone : phone,
+      ci : ci,
+      date : date,
+      attented : attention.a
+    }
+
+    await axios.put(`http://localhost:4000/api/client/${id}`, updateClient);
+
+  }
+
+  // console.log(attention)
 
   return(
     <div className="ClientBoxCrad">
@@ -50,11 +52,22 @@ const ClientBoxCard = ({name, date, ci, phone, email}) => {
           <option value="Si">Si</option>
           <option value="No">No</option>
         </select>
-        {attention.cita === "Si" ? (
-          <label htmlFor="attention">
-            <p>Motivo de la cita</p>
-            <input type="text"placeholder="Motivo de la cita" />
-          </label>
+
+        {
+          attention.cita === "Si" ? (
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="attention">
+                <p>Motivo de la cita</p>
+                <input 
+                  type="text"
+                  placeholder="Motivo de la cita"
+                  onChange={handleChange}
+                  name="a" 
+                  value={attention.a}
+                />
+              </label>
+            <input type="submit"/>
+          </form>
         ) : ''
 
         }

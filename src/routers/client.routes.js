@@ -22,4 +22,15 @@ router.get("/:id", async (req, res) =>{
   res.json(client);
 });
 
+router.put("/:id", async (req, res) => {
+  const { name, email, ci, date, attented } = req.body;
+  await Client.findByIdAndUpdate(req.params.id, {
+    name,
+    email,
+    ci,
+    date,
+    attented
+  })
+})
+
 module.exports = router;

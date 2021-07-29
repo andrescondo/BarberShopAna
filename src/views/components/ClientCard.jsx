@@ -35,6 +35,7 @@ export default class ClientCard extends Component{
         ci={this.state.ci}
         email={this.state.email}
         date={this.state.date}
+        id={this.props.match.params.id}
       />
     )
   }

@@ -7,7 +7,8 @@ const ClientShema = new Schema({
   phone: {type: String, required: true},
   ci: {type:String, required: true},
   date : {type: String, required: true},
-  attention : {type: String, requiered: false}
+  attention : {type: String, requiered: false},
+  attented : {type: String , requiered: false}
   
 });
 
