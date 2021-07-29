@@ -17,4 +17,9 @@ router.post("/", async (req, res) => {
   // res.json({status: 'Client Saved'});
 })
 
+router.get("/:id", async (req, res) =>{
+  const client = await Client.findById(req.params.id);
+  res.json(client);
+});
+
 module.exports = router;
