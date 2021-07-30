@@ -22,7 +22,7 @@ paquete de dependencias
  **http://localhost:4000**
  > npm run dev
  
-Ejecutar desde consola, la unicacion es indeferente, igual funcionara si tiene previamente instalado mongoDB
+Ejecutar desde consola, la ubicación es indeferente, igual funcionará si tiene previamente instalado mongoDB
  > mongod
  
  
