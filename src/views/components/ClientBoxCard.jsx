@@ -39,7 +39,8 @@ const ClientBoxCard = ({name, date, ci, phone, email, id}) => {
   // console.log(attention)
 
   return(
-    <div className="ClientBoxCrad">
+    < div className="ClientCard">
+      <div className="ClientBoxCrad">
       <h2>Edita al cliente</h2>
       <p>Nombres: {name}</p>
       <p>Cedula de identidad{ci}</p>
@@ -74,7 +75,9 @@ const ClientBoxCard = ({name, date, ci, phone, email, id}) => {
         }
       </div>
     </div>
-  )
+ 
+    </div>
+ )
 }
 
 export default ClientBoxCard;

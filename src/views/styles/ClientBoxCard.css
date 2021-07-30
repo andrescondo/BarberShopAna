@@ -1,0 +1,25 @@
+.ClientCard{
+  /* width: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 30px 20px; */
+}
+
+.ClientBoxCrad{
+  margin-top: 30px;
+  width: 300px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+select{
+  padding: 5px 10px;
+  border-radius: 10px;
+}

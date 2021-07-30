@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const ClientBox = ({data}) => {
   return(
-    <div>
+    <div className="card">
       <p>Nombre: {data.name}</p>
       <p>Telefono: {data.phone}</p>
       {

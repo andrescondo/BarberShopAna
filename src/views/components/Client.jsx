@@ -24,12 +24,14 @@ export default class Client extends React.Component {
         <div className="client--box">
           <h1>Lista de clientes registrados</h1>
      
-         {/* {this.state.res.map(data => <li>{data.name}</li> ) } */}
-         {
-           this.state.res.map( (data) => (
-            <ClientBox key={data._id} data={data} />
-           ) ) 
-         }
+         <div className="ClientBox">
+          {
+            this.state.res.map( (data) => (
+              <ClientBox key={data._id} data={data} />
+            ) ) 
+          }
+         </div>
+         
         </div>
       </div>
     )
