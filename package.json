@@ -7,7 +7,9 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "webpack": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "format": "prettier --write {*.js,src/**/**/*.{js,jsx}}",
+    "save": "npm run format && git add ."
   },
   "keywords": [
     "barberia_ana",
@@ -41,8 +43,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^6.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
+    "jest": "^27.0.6",
     "mini-css-extract-plugin": "^1.6.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",

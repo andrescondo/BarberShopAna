@@ -1,15 +1,14 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const ClientShema = new Schema({
-  name : {type: String , required: true},
-  email : {type: String, required: true},
-  phone: {type: String, required: true},
-  ci: {type:String, required: true},
-  date : {type: String, required: false},
-  attention : {type: String, requiered: false},
-  attented : {type: String , requiered: false}
-  
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  ci: { type: String, required: true },
+  date: { type: String, required: false },
+  attention: { type: String, requiered: false },
+  attented: { type: String, requiered: false },
 });
 
-module.exports = mongoose.model('Client', ClientShema)
+module.exports = mongoose.model('Client', ClientShema);

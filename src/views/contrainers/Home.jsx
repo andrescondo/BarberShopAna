@@ -1,13 +1,13 @@
 import React from 'react';
-import HomeFrom from '../components/HomeFrom'
+import HomeFrom from '../components/HomeFrom';
 
-const Home = () =>{
-  return(
+const Home = () => {
+  return (
     <div className="Home">
       <h2>Registro de citas</h2>
-      <HomeFrom/>
+      <HomeFrom />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

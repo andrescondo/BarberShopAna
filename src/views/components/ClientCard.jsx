@@ -1,36 +1,37 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 import ClientBoxCard from './ClientBoxCard';
 
-export default class ClientCard extends Component{
+export default class ClientCard extends Component {
   constructor() {
     super();
     this.state = {
       res: [],
       name: '',
-      phone:'',
+      phone: '',
       ci: '',
-      email:'',
+      email: '',
       date: '',
       attented: '',
     };
   }
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:4000/api/client/' + this.props.match.params.id);
+    const res = await axios.get(
+      'http://localhost:4000/api/client/' + this.props.match.params.id
+    );
     this.setState({
       // res : res.data,
-      name : res.data.name,
+      name: res.data.name,
       ci: res.data.ci,
       email: res.data.email,
       phone: res.data.phone,
       date: res.data.date,
-      attented:res.data.attented
-    })
+      attented: res.data.attented,
+    });
     console.log(this.state.res);
-
   }
   render() {
-    return(
+    return (
       <ClientBoxCard
         name={this.state.name}
         phone={this.state.phone}
@@ -38,8 +39,8 @@ export default class ClientCard extends Component{
         email={this.state.email}
         date={this.state.date}
         id={this.props.match.params.id}
-        attented = {this.state.attented}
+        attented={this.state.attented}
       />
-    )
+    );
   }
 }

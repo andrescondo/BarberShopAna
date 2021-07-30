@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const InitialState = {
-  name : "",
-  email:"",
-  phone:"",
-  ci:"",
-  date: "2021-07-29"
-}
+  name: '',
+  email: '',
+  phone: '',
+  ci: '',
+  date: '2021-07-29',
+};
 
 const HomeFrom = () => {
   const [form, setForm] = useState(InitialState);
@@ -18,26 +18,28 @@ const HomeFrom = () => {
       ...form,
       [e.target.name]: e.target.value,
     });
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(form);
-    const res = await axios.post('http://localhost:4000/api/client', {
-      name : form.name,
-      email : form.email,
-      phone : form.phone,
-      ci : form.ci,
-      date : form.date
-    }).then(res => {
-      console.log(res);
-      console.log(res.data.data);
-    })
+    const res = await axios
+      .post('http://localhost:4000/api/client', {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        ci: form.ci,
+        date: form.date,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data.data);
+      });
 
-    console.log(res)
-  }
+    console.log(res);
+  };
 
-  return(
+  return (
     <div className="HomeFrom">
       <Link to="/clients">Lista de Clientes</Link>
       <form onSubmit={handleSubmit}>
@@ -55,7 +57,7 @@ const HomeFrom = () => {
           />
         </label>
         <label htmlFor="ci">
-        <p>Ingrese el numero de cedula</p>
+          <p>Ingrese el numero de cedula</p>
           <input
             type="text"
             name="ci"
@@ -68,7 +70,7 @@ const HomeFrom = () => {
           />
         </label>
         <label htmlFor="phone">
-        <p>Ingrese el numero de telefono</p>
+          <p>Ingrese el numero de telefono</p>
           <input
             type="text"
             name="phone"
@@ -109,9 +111,8 @@ const HomeFrom = () => {
           <input type="submit" value="Guardar" />
         </div>
       </form>
-
     </div>
-  )
-}
+  );
+};
 
 export default HomeFrom;
