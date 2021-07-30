@@ -1,6 +1,6 @@
 :root{
-  --primary-color : #d3cea8;
-  --secondary-color: #36393B;
+  --primary-color : #008C9E;
+  --secondary-color: rgb(228, 227, 227);
   --grown: #696758;
   --grey: #45484B;
 }
@@ -8,9 +8,121 @@
 body{
   margin:0px;
   padding:0px;
-  background-color:var(--primary-color) ;
-  color:var(--secondary-color);
+  background-color:var(--secondary-olor) ;
+  color:var(--grey);
   /* , #d6c06c, #896e3e, #5a4d35, #463d29 */
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+}
+
+a{
+  padding: 10px 16px;
+  background-color: var(--primary-color);
+  color: #eee;
+  border-radius: 10px;
+  text-decoration: none;
+
+}
+
+input{
+  width: 90%;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+.Header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.Header h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+
+.HomeFrom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HomeFrom form{
+  width: 370px;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.HomeFrom form p{
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Client{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client--box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.ClientBox{
+  display: grid;
+  grid-template-columns: repeat(3, .33fr);
+  grid-template-areas: "card card card";
+}
+
+.card{
+  grid:card;
+  margin: 20px;
+  border: 1px solid var(--grey);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.ClientCard{
+  /* width: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 30px 20px; */
+}
+
+.ClientBoxCrad{
+  margin-top: 30px;
+  width: 300px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+select{
+  padding: 5px 10px;
+  border-radius: 10px;
 }
