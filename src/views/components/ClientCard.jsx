@@ -10,7 +10,8 @@ export default class ClientCard extends Component{
       phone:'',
       ci: '',
       email:'',
-      date: ''
+      date: '',
+      attented: '',
     };
   }
 
@@ -22,7 +23,8 @@ export default class ClientCard extends Component{
       ci: res.data.ci,
       email: res.data.email,
       phone: res.data.phone,
-      date: res.data.date
+      date: res.data.date,
+      attented:res.data.attented
     })
     console.log(this.state.res);
 
@@ -36,6 +38,7 @@ export default class ClientCard extends Component{
         email={this.state.email}
         date={this.state.date}
         id={this.props.match.params.id}
+        attented = {this.state.attented}
       />
     )
   }

@@ -39,7 +39,7 @@ const HomeFrom = () => {
 
   return(
     <div className="HomeFrom">
-      <Link to="/clients">{`Ver Clientes => `}</Link>
+      <Link to="/clients">Lista de Clientes</Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           <p>Ingrese los nombres del cliente</p>

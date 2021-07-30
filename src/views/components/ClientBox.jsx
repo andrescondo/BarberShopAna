@@ -8,16 +8,18 @@ const ClientBox = ({data}) => {
       <p>Telefono: {data.phone}</p>
       {
         data.attented 
-        ? (<p>Atencion: {data.attented}</p>) 
-        : ""
-      }
-      {
-        data.date 
-        ? (<p>Fecha de la cita: {data.date}</p>) 
-        : " " 
+        ? (
+          <div>
+            <p>Atención realizada!</p>
+            <p>Atención: {data.attented}</p>
+          </div>
+          ) 
+          : data.date 
+            ? (<p>Fecha de la cita: {data.date}</p>) 
+            : " " 
       }
 
-      <Link to={"/clients/edit/" + data._id}>Editar</Link>
+      <Link to={"/clients/edit/" + data._id}>Ver</Link>
       <br />
     </div>
   )
