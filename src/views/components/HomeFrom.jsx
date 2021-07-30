@@ -51,6 +51,7 @@ const HomeFrom = () => {
             onChange={handleChange}
             maxLength="100" //limite de caracteres aceptados
             required
+            autoComplete="off"
           />
         </label>
         <label htmlFor="ci">
@@ -63,18 +64,20 @@ const HomeFrom = () => {
             onChange={handleChange}
             maxLength="10"
             required
+            autoComplete="off"
           />
         </label>
         <label htmlFor="phone">
         <p>Ingrese el numero de telefono</p>
           <input
-            type="phone"
+            type="text"
             name="phone"
             value={form.phone}
             placeholder="Numero de telefono"
             onChange={handleChange}
             maxLength="10"
             required
+            autoComplete="off"
           />
         </label>
         <label htmlFor="email">
@@ -86,6 +89,7 @@ const HomeFrom = () => {
             placeholder="Correo electronico"
             onChange={handleChange}
             required
+            autoComplete="off"
           />
         </label>
         <label htmlFor="date">
