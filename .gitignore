@@ -1,4 +1,2 @@
 node_modules
 
-# arvhivo de lectura del fronted - ejecutar npm run webapack para tenerlo
-src/**/**/*.js
