@@ -5,7 +5,7 @@ Sistema de control de citas de clientes, con backend y frontend
 
 ### Instalar
 MongoDB
-
+[Pasos a seguir]( https://gist.github.com/AlejoJamC/b8635af765ac7495c4931403b97a0d78)
 paquete de dependencias 
  ```
  npm install  
